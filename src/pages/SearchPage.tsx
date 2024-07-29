@@ -5,7 +5,6 @@ import SearchBar, { SearchForm } from "@/components/SearchBar";
 import SearchResultInfo from "@/components/SearchResultInfo";
 import SearchResultCard from "@/components/SearchResultsCard";
 import SortOptionDropdown from "@/components/SortOptionDropdown";
-import CuisineCheckbox from "@/forms/manage-restaurant-form/CuisineCheckbox";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
