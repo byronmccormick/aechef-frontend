@@ -5,6 +5,7 @@ import SearchBar, { SearchForm } from "@/components/SearchBar";
 import SearchResultInfo from "@/components/SearchResultInfo";
 import SearchResultCard from "@/components/SearchResultsCard";
 import SortOptionDropdown from "@/components/SortOptionDropdown";
+import { LoaderPinwheel } from "lucide-react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -69,7 +70,11 @@ const SearchPage = () => {
   }
 
   if(isLoading){
-    <span>Loading...</span>
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <LoaderPinwheel className="self-center h-10 w-10 animate-spin" />
+      </div>
+    )
   }
   
   if(!results?.data || !city){
